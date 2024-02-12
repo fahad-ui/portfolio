@@ -20,6 +20,12 @@ const Contact = () => {
   });
   const [loading, setIsLoading] = useState(false);
 
+
+  const [errors, setErrors] = useState({
+    username: '',
+    password: '',
+  });
+
   const handleChange = (e) => {
     const { name, value } = e.target;
 
@@ -28,6 +34,20 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+
+    let newErrors = {}
+    Object.keys(form).forEach((key)=>{
+      if(!form[key]){
+        newErrors[key] = `Please enter ${key}`
+      }
+    })
+
+    if(Object.keys(newErrors).length>0){
+      setErrors(newErrors)
+      return
+    }
+
     setIsLoading(true);
 
     emailjs
@@ -89,6 +109,7 @@ const Contact = () => {
               placeholder="What's your name?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text:white rounded-lg outlined-none border-none font-medium"
             />
+            {errors.name && <p>{errors.name}</p>}
           </label>
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Email</span>
@@ -100,6 +121,7 @@ const Contact = () => {
               placeholder="What's your email id?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text:white rounded-lg outlined-none border-none font-medium"
             />
+            {errors.email && <p>{errors.email}</p>}
           </label>
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Message</span>
@@ -111,12 +133,13 @@ const Contact = () => {
               placeholder="What do you want to say?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text:white rounded-lg outlined-none border-none font-medium"
             />
+            {errors.message && <p>{errors.message}</p>}
           </label>
           <button
             type="submit"
             className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
           >
-            {loading ? "Sending..." : "Send"}
+            {errors ? "send" : loading ? "Sending..." : "Send"}
           </button>
         </form>
       </motion.div>
