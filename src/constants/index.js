@@ -19,7 +19,6 @@ import {
     DALLE,
     ECommerce,
     // threejs,
-    bootstrap,
     contextapi,
     expressjs,
     hotelReservation,
