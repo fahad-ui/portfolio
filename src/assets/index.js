@@ -31,6 +31,7 @@ import hotelReservation from './hotelReservation.png'
 import ECommerce from './ECommerce.png'
 import adminPannel from "./AdminPannel.png"
 import discord from "./discord.png"
+import nextjs from "./tech/nextjs.svg"
 
 export {
   logo,
@@ -65,5 +66,6 @@ export {
   mevi,
   adminPannel,
   discord,
-  mysql
+  mysql,
+  nextjs
 };

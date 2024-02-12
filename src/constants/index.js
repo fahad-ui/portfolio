@@ -26,7 +26,8 @@ import {
     mevi,
     adminPannel,
     discord,
-    mysql
+    mysql,
+    nextjs
   } from "../assets";
   
   export const navLinks = [
@@ -80,11 +81,6 @@ import {
       style: 'shadow-sky-400'
     },
     {
-      name: "Bootstrap",
-      icon: bootstrap,
-      style: 'shadow-violet-900'
-    },
-    {
       name: "JavaScript",
       icon: javascript,
       style: 'shadow-yellow-500'
@@ -94,7 +90,11 @@ import {
       icon: reactjs,
       style: 'shadow-blue-600'
     },
-    
+    {
+      name: "Next JS",
+      icon: nextjs,
+      style: 'shadow-gray-400'  
+    },
     {
       name: "Redux Toolkit",
       icon: redux,
@@ -228,39 +228,6 @@ import {
       source_code_link: "https://github.com/fahad-ui/discord-clone",
     },
     {
-      name: "E-Commerce Application",
-      description:
-        "Revolutionized E-Commerce with a cutting-edge platform built on React JS and Redux, ensuring flawless state management for a seamless shopping experience. Integrated Stripe to offer secure and lightning-fast payment processing, empowering users to shop with confidence and ease. Experience the future of online shopping with our innovative E-Commerce solution.",
-      tags: [
-        {
-          name: "React JS",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "Node JS",
-          color: "green-text-gradient",
-        },
-        {
-          name: "Redux",
-          color: "pink-text-gradient",
-        },
-        {
-          name: "Express JS",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "Stripe",
-          color: "green-text-gradient",
-        },
-        {
-          name: "Mongo DB",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: ECommerce,
-      source_code_link: "https://github.com/fahad-ui/E-Commerce-Application",
-    },
-    {
       name: "Hotel Booking System",
       description:
         "Built a hotel reservation application for streamline booking processes and enhanced user experience, allowing customers to search for hotels, view room availability, and make reservations seamlessly and Implemented secure user authentication and data protection through JWT, ensuring privacy during the reservation process.",
@@ -330,6 +297,39 @@ import {
       ],
       image: DALLE,
       source_code_link: "https://github.com/fahad-ui/AI_Image_Generation_App_Using_DALL-E",
+    },
+    {
+      name: "E-Commerce Application",
+      description:
+        "Revolutionized E-Commerce with a cutting-edge platform built on React JS and Redux, ensuring flawless state management for a seamless shopping experience. Integrated Stripe to offer secure and lightning-fast payment processing, empowering users to shop with confidence and ease. Experience the future of online shopping with our innovative E-Commerce solution.",
+      tags: [
+        {
+          name: "React JS",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Node JS",
+          color: "green-text-gradient",
+        },
+        {
+          name: "Redux",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "Express JS",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Stripe",
+          color: "green-text-gradient",
+        },
+        {
+          name: "Mongo DB",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: ECommerce,
+      source_code_link: "https://github.com/fahad-ui/E-Commerce-Application",
     },
     {
       name: "Admin Dashboard",
